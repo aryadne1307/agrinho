@@ -1,124 +1,144 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Festejando a Conexão do Campo e da Cidade</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Festejando a Conexão Campo & Cidade</title> <!-- Fonte bonita do Google Fonts --> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" /> <style>
+    * {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #f0f8ff, #e0ffe0);
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease;
+      min-height: 100vh;
+      padding: 2rem;
+      background-color: #f0f2f5;
       color: #333;
+      background-image: url('caminho-da-imagem-cidade.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    nav {
-      background-color: #3e8e41;
-      text-align: center;
-      padding: 0.5rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+    body.dark {
+      background-color: #2f3e46;
+      color: #cdd6f4;
+      background-image: url('caminho-da-imagem-campo.jpg');
     }
 
     .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .section {
-      margin-bottom: 2rem;
+    body.dark .container {
+      background-color: rgba(47, 62, 70, 0.8);
     }
 
-    .section h2 {
-      color: #2c6e3c;
+    h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
-    .section p {
+    p {
+      font-size: 1.2rem;
       line-height: 1.6;
-    }
-
-    .image-box {
       text-align: center;
-      margin-top: 2rem;
     }
 
-    .image-box img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background-color: #2e7031;
+    button {
+      display: block;
+      margin: 2rem auto 0;
+      background-color: #4caf50;
+      border: none;
+      padding: 0.75rem 1.5rem;
       color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      font-size: 1.1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease;
     }
-  </style>
-</head>
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    body.dark button {
+      background-color: #a3be8c;
+      color: #2f3e46;
+    }
+
+    body.dark button:hover {
+      background-color: #7ea57e;
+    }
+  </style></head>
 <body>
-
-  <header>
-    <h1>Festejando a Conexão do Campo e da Cidade</h1>
-  </header>
-
-  <nav>
-    <a href="#objetivo">Objetivo</a>
-    <a href="#atividades">Atividades</a>
-    <a href="#galeria">Galeria</a>
-  </nav>
-
   <div class="container">
+    <h1>Festejando a Conexão entre o Campo e a Cidade</h1><button id="toggleThemeBtn">Mudar para Tema Campo (Escuro)</button>
 
-    <section id="objetivo" class="section">
-      <h2>Objetivo do Projeto</h2>
-      <p>Este projeto tem como foco celebrar e fortalecer a conexão entre o campo e a cidade, destacando a importância da agricultura, do comércio, da cultura e da cooperação mútua para um desenvolvimento sustentável e justo.</p>
-    </section>
+<h2>O Café que Une Mundos</h2>
+<p>
+  Imagina uma xícara de café quente, aroma forte que nasce lá no campo, das plantações cuidadas com carinho, até as mesas dos cafés da cidade, onde as ideias ganham vida. O café é mais que uma bebida: é o elo que traduz a rotina do campo em energia para o movimento urbano. É a história de mãos calejadas que atravessam ruas de concreto para chegar ao coração das metrópoles.
+</p>
 
-    <section id="atividades" class="section">
-      <h2>Atividades Desenvolvidas</h2>
-      <ul>
-        <li>Feira de produtos locais: “Do Campo à Mesa”.</li>
-        <li>Entrevistas com agricultores e comerciantes urbanos.</li>
-        <li>Oficinas de culinária e sustentabilidade.</li>
-        <li>Exposição de artes com materiais recicláveis.</li>
-      </ul>
-    </section>
+<h2>O Canto dos Pássaros e o Som dos Automóveis</h2>
+<p>
+  O campo e a cidade têm suas próprias músicas. No campo, o canto dos pássaros e o vento nas árvores; na cidade, o burburinho das pessoas e o ronco dos carros. Mas e se essa música se misturasse? A conexão entre esses dois mundos é uma sinfonia inesperada, onde o natural e o urbano dialogam e se complementam, mostrando que, no fundo, respiramos o mesmo ar.
+</p>
 
-    <section id="galeria" class="section">
-      <h2>Galeria de Imagens</h2>
-      <div class="image-box">
-        <img src="https://via.placeholder.com/800x400.png?text=Campo+e+Cidade&quot; alt="Conexão do Campo e Cidade">
-      </div>
-    </section>
+<h2>A Semente que Voa no Tempo e no Espaço</h2>
+<p>
+  Uma semente plantada no campo pode florescer no jardim da cidade. Essa semente carrega o passado, a esperança e o futuro. Ela representa a passagem de valores, tradições e inovação. O que nasce da terra rural encontra na cidade o solo fértil para crescer em novas formas, como arte, cultura, tecnologia e convivência.
+</p>
 
-  </div>
+<h2>O Mercado que Conta Histórias</h2>
+<p>
+  No mercado da cidade, onde se vendem frutas, verduras e produtos fresquinhos, há mais do que comércio: há a história do campo, o suor, a dedicação e o ciclo da natureza. Cada barraca é uma ponte entre o trabalho rural e a vida urbana, um lugar onde a conexão se celebra em cada troca, em cada sorriso, em cada cheiro.
+</p>
 
-  <footer>
-    <p>&copy; 2025 Projeto Agrinho – Todos os direitos reservados.</p>
-  </footer>
+h2>O Saber que Transita</h2>
+  <p>
+    A sabedoria do campo, passada de geração em geração, e a inovação urbana, nascida das universidades e centros tecnológicos, formam uma rede poderosa. Quando se encontram, transformam o mundo.
+  </p>
 
-</body>
+  <h2>Feiras: Pontes de Encontro</h2>
+  <p>
+    Nas feiras livres, o rural e o urbano se encontram. Os produtos da terra chegam fresquinhos, e o público da cidade reconhece o valor do que vem direto do campo. É conexão real e cotidiana.
+  </p>
+
+  <h2>O Futuro se Planta Junto</h2>
+  <p>
+    Ao celebrarmos a conexão entre o campo e a cidade, também semeamos o futuro. Um futuro que depende da cooperação entre quem produz e quem consome, entre quem planta e quem transforma.
+  </p>
+  
+  <script>
+    const button = document.getElementById('toggleThemeBtn');
+    const body = document.body;
+
+    button.addEventListener('click', () => {
+      body.classList.toggle('dark');
+
+      if (body.classList.contains('dark')) {
+        button.textContent = 'Mudar para Tema Cidade (Claro)';
+      } else {
+        button.textContent = 'Mudar para Tema Campo (Escuro)';
+      }
+    });
+  </script></body>
 </html>

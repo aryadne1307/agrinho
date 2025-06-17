@@ -1,70 +1,50 @@
-/* Estilo geral */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #103dd1;
-    color: #0350f8;
-  }
-  
-  /* Cabeçalho */
-  header {
-    background-color: #f3f4f8;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
-  /* Navegação */
-  nav {
-    background-color: #388e3c;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-  }
-  
-  /* Conteúdo principal */
-  .container {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  /* Seções */
-  .section {
-    margin-bottom: 2rem;
-  }
-  
-  .section h2 {
-    color: #2e7d32;
-    margin-bottom: 1rem;
-  }
-  
-  .section p {
-    line-height: 1.6;
-  }
-  
-  /* Espaço do aluno */
-  .custom-area {
-    background-color: #ffffff;
-    border: 2px dashed #ccc;
-    padding: 1rem;
-    text-align: center;
-    color: #777;
-    margin-top: 1rem;
-  }
-  
-  /* Rodapé */
-  footer {
-    background-color: #2e7031;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
+  background-image: url('campo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.dark {
+  background-color: #2f3e46;
+  color: #cdd6f4;
+  background-image: url('cidade.jpeg');
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.7); /* translúcido */
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .container {
+  background-color: rgba(47, 62, 70, 0.8);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
