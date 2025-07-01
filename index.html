@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Festejando a Conexão Campo & Cidade</title> <!-- Fonte bonita do Google Fonts --> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" /> <style>
+  <title>Festejando a Conexão Campo & Cidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -16,16 +19,64 @@
       padding: 2rem;
       background-color: #f0f2f5;
       color: #333;
-      background-image: url('caminho-da-imagem-cidade.jpg');
+      background-image: url('mirtilo.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      overflow-y: scroll;
+      scrollbar-width: thin; /* Firefox fallback */
+      scrollbar-color: transparent transparent;
+    }
+
+    /* Scroll personalizado para WebKit (Chrome, Edge, Safari) - TEMA CLARO */
+    body::-webkit-scrollbar {
+      width: 20px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.05);
+      border-radius: 10px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-image: url('mirtilo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 10px;
+      border: 4px solid rgba(255,255,255,0.8);
+      cursor: pointer;
     }
 
     body.dark {
       background-color: #2f3e46;
       color: #cdd6f4;
-      background-image: url('caminho-da-imagem-campo.jpg');
+      background-image: url('morango.png');
+      scrollbar-color: transparent transparent;
+    }
+
+    /* Scroll personalizado para WebKit - TEMA ESCURO */
+    body.dark::-webkit-scrollbar {
+      width: 20px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+    }
+
+    body.dark::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+
+    body.dark::-webkit-scrollbar-thumb {
+      background-image: url('morango.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 10px;
+      border: 4px solid rgba(0,0,0,0.6);
+      cursor: pointer;
     }
 
     .container {
@@ -51,7 +102,7 @@
     h2 {
       font-size: 1.8rem;
       margin-top: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       text-align: center;
     }
 
@@ -59,6 +110,10 @@
       font-size: 1.2rem;
       line-height: 1.6;
       text-align: center;
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     button {
@@ -87,46 +142,70 @@
     body.dark button:hover {
       background-color: #7ea57e;
     }
-  </style></head>
+  </style>
+</head>
 <body>
   <div class="container">
-    <h1>Festejando a Conexão entre o Campo e a Cidade</h1><button id="toggleThemeBtn">Mudar para Tema Campo (Escuro)</button>
+    <h1>Festejando a Conexão entre o Campo e a Cidade</h1>
+    <button id="toggleThemeBtn">Mudar para Tema Campo (Escuro)</button>
+<style>
 
-<h2>O Café que Une Mundos</h2>
-<p>
-  Imagina uma xícara de café quente, aroma forte que nasce lá no campo, das plantações cuidadas com carinho, até as mesas dos cafés da cidade, onde as ideias ganham vida. O café é mais que uma bebida: é o elo que traduz a rotina do campo em energia para o movimento urbano. É a história de mãos calejadas que atravessam ruas de concreto para chegar ao coração das metrópoles.
-</p>
+img{
 
-<h2>O Canto dos Pássaros e o Som dos Automóveis</h2>
-<p>
-  O campo e a cidade têm suas próprias músicas. No campo, o canto dos pássaros e o vento nas árvores; na cidade, o burburinho das pessoas e o ronco dos carros. Mas e se essa música se misturasse? A conexão entre esses dois mundos é uma sinfonia inesperada, onde o natural e o urbano dialogam e se complementam, mostrando que, no fundo, respiramos o mesmo ar.
-</p>
+  width: 50%;
+}
 
-<h2>A Semente que Voa no Tempo e no Espaço</h2>
-<p>
-  Uma semente plantada no campo pode florescer no jardim da cidade. Essa semente carrega o passado, a esperança e o futuro. Ela representa a passagem de valores, tradições e inovação. O que nasce da terra rural encontra na cidade o solo fértil para crescer em novas formas, como arte, cultura, tecnologia e convivência.
-</p>
+</style>
+    <h2>O Café que Une Mundos</h2>
+    <p>
+      Imagine o aroma do café, que nasce no campo e energiza a cidade. Mais que bebida, é ponte entre a vida simples da terra e o ritmo acelerado das ruas urbanas. O café é a força que transforma o esforço rural em inspiração diária.
+    </p>
 
-<h2>O Mercado que Conta Histórias</h2>
-<p>
-  No mercado da cidade, onde se vendem frutas, verduras e produtos fresquinhos, há mais do que comércio: há a história do campo, o suor, a dedicação e o ciclo da natureza. Cada barraca é uma ponte entre o trabalho rural e a vida urbana, um lugar onde a conexão se celebra em cada troca, em cada sorriso, em cada cheiro.
-</p>
+<center><img src="O Café que Une.jpeg" alt=""> </center>
 
-h2>O Saber que Transita</h2>
-  <p>
-    A sabedoria do campo, passada de geração em geração, e a inovação urbana, nascida das universidades e centros tecnológicos, formam uma rede poderosa. Quando se encontram, transformam o mundo.
-  </p>
+    <h2>O Som que Conecta</h2>
+    <p>
+      O canto dos pássaros no campo encontra o burburinho da cidade. Essa harmonia sonora revela que, apesar das diferenças, campo e cidade respiram o mesmo ar e vivem uma mesma história de encontros e trocas.
+    </p>
+    
+<center><img src="O Canto dos Pássaros .jpeg" alt=""></center>
 
-  <h2>Feiras: Pontes de Encontro</h2>
-  <p>
-    Nas feiras livres, o rural e o urbano se encontram. Os produtos da terra chegam fresquinhos, e o público da cidade reconhece o valor do que vem direto do campo. É conexão real e cotidiana.
-  </p>
+    <h2> Sementes de Futuro</h2>
+    <p>
+      Cada semente plantada na terra carrega sonhos e esperanças que florescem na cidade. É a tradição rural que se reinventa, se transforma e cria novas formas de cultura, tecnologia e convivência.
+    </p>
 
-  <h2>O Futuro se Planta Junto</h2>
-  <p>
-    Ao celebrarmos a conexão entre o campo e a cidade, também semeamos o futuro. Um futuro que depende da cooperação entre quem produz e quem consome, entre quem planta e quem transforma.
-  </p>
-  
+    <img src="" alt="">
+
+    <h2>O Mercado que Conta Histórias</h2>
+    <p>
+      No mercado urbano, a diversidade do campo se revela em cores, sabores e aromas. Cada barraca é um capítulo da luta, do suor e da dedicação que conectam produtores rurais e consumidores urbanos.
+    </p>
+
+    <center><img src="O Mercado que Conta.jpeg" alt=""></center>
+
+    <h2>Sabedoria que Transita</h2>
+    <p>
+      O saber ancestral do campo encontra a inovação da cidade para criar soluções poderosas. Essa troca entre gerações e ideias é o motor que move o progresso com respeito às raízes.
+    </p>
+    <center><img src="" alt=""</center>
+
+    <h2>Feiras Livres: Encontro de Vida</h2>
+    <p>
+      Nas feiras livres, a terra e a cidade se abraçam. Ali, produtos frescos e histórias autênticas se misturam, celebrando uma conexão real e cotidiana que fortalece comunidades.
+    </p>
+
+    <h2>Tecnologia e Tradição</h2>
+    <p>
+      A tecnologia leva o campo para o futuro e traz para a cidade o valor da natureza. Drones, aplicativos e inovação se unem à tradição para construir um mundo mais sustentável.
+    </p>
+
+    <h2>Plantando o Amanhã</h2>
+    <p>
+      A conexão entre campo e cidade é uma semente plantada hoje para colher um futuro mais justo, equilibrado e cheio de possibilidades. É a cooperação que transforma desafios em conquistas.
+    </p>
+  </div>
+
   <script>
     const button = document.getElementById('toggleThemeBtn');
     const body = document.body;
@@ -140,5 +219,6 @@ h2>O Saber que Transita</h2>
         button.textContent = 'Mudar para Tema Campo (Escuro)';
       }
     });
-  </script></body>
+  </script>
+</body>
 </html>
