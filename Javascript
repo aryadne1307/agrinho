@@ -1,0 +1,7 @@
+<button onclick="scrollToSection()">Ir para a Seção 1</button>
+
+<script>
+function scrollToSection() {
+  document.getElementById('section1').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
