@@ -28,55 +28,11 @@
       scrollbar-color: transparent transparent;
     }
 
-    /* Scroll personalizado para WebKit (Chrome, Edge, Safari) - TEMA CLARO */
-    body::-webkit-scrollbar {
-      width: 20px;
-      background: rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-
-    body::-webkit-scrollbar-track {
-      background: rgba(0,0,0,0.05);
-      border-radius: 10px;
-    }
-
-    body::-webkit-scrollbar-thumb {
-      background-image: url('mirtilo.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 10px;
-      border: 4px solid rgba(255,255,255,0.8);
-      cursor: pointer;
-    }
-
     body.dark {
       background-color: #2f3e46;
       color: #cdd6f4;
       background-image: url('morango.png');
       scrollbar-color: transparent transparent;
-    }
-
-    /* Scroll personalizado para WebKit - TEMA ESCURO */
-    body.dark::-webkit-scrollbar {
-      width: 20px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 10px;
-    }
-
-    body.dark::-webkit-scrollbar-track {
-      background: rgba(255,255,255,0.1);
-      border-radius: 10px;
-    }
-
-    body.dark::-webkit-scrollbar-thumb {
-      background-image: url('morango.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 10px;
-      border: 4px solid rgba(0,0,0,0.6);
-      cursor: pointer;
     }
 
     .container {
@@ -142,6 +98,32 @@
     body.dark button:hover {
       background-color: #7ea57e;
     }
+
+    .scroll-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #71ad35;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-btn:hover {
+  background-color: #71ad35;
+}
+
+body.dark button {
+  background-color: #638545;
+  color: #2f3e46;
+}
+
   </style>
 </head>
 <body>
@@ -212,8 +194,10 @@ img{
     <center><img src="Plantando.jpeg" alt=""></center>
   </div>
 
-  <script>
-    const button = document.getElementById('toggleThemeBtn');
+<button id="scrollBtn" class="scroll-btn" onclick="handleScroll()">⬇️</button>
+
+<script>
+const button = document.getElementById('toggleThemeBtn');
     const body = document.body;
 
     button.addEventListener('click', () => {
@@ -225,6 +209,45 @@ img{
         button.textContent = 'Mudar para Tema Campo (Claro)';
       }
     });
-  </script>
+
+  // Define se estamos no fim da página
+  let atBottom = false;
+
+  // Função chamada ao clicar no botão
+  function handleScroll() {
+    if (atBottom) {
+      // Volta ao topo com rolagem suave
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Vai para o fim com rolagem suave
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  }
+
+  // Monitoramento de scroll da página
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY; // Posição atual do scroll
+    const windowHeight = window.innerHeight; // Altura da janela visível
+    const bodyHeight = document.body.scrollHeight; // Altura total do corpo do documento
+    const button = document.getElementById('scrollBtn'); // Botão
+
+    // Está no topo (menos de 100px rolado)
+    if (scrollTop < 100) {
+      atBottom = false;
+      button.innerText = '⬇️'; // Flecha para descer
+      button.style.display = 'block';
+    }
+    // Está no fim (próximo do final da página)
+    else if (scrollTop + windowHeight >= bodyHeight - 100) {
+      atBottom = true;
+      button.innerText = '⬆️'; // Flecha para subir
+      button.style.display = 'block';
+    }
+    // Está no meio da página
+    else {
+      button.style.display = 'none'; // Esconde o botão
+    }
+  });
+</script>
 </body>
 </html>
